@@ -1,0 +1,127 @@
+
+div.rot_box {
+	position: relative;
+	width: 100vw;
+	height: 29.95vw;
+	background-color: red;
+	z-index: 0;
+	padding: 0;
+	border-bottom: 0.3vw solid #00FA05;
+}
+
+div.rot_left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3vw;
+	height: 30vw;
+	line-height: 30vw;
+	font-size: 3vw;
+	text-align: center;
+	font-weight: bold;
+	z-index: 1;
+	color: #00FA05;
+	transition: background-color 1s;
+	cursor: pointer;
+}
+
+div.rot_right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3vw;
+	height: 30vw;
+	line-height: 30vw;
+	font-size: 3vw;
+	text-align: center;
+	font-weight: bold;
+	z-index: 1;
+	color: #00FA05;
+	transition: background-color 1s;
+	cursor: pointer;
+}
+
+div.rot_right:hover, div.rot_left:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+div#rot_buttons {
+	position: absolute;
+	bottom: 0.5vw;
+	right: 0;
+	width: 100vw;
+	font-size: 1.5vw;
+	text-align: center;
+	font-weight: bold;
+	z-index: 1;
+}
+
+div#rot_buttons a {
+	color: #FFF;
+}
+
+div#rot_buttons a:hover {
+	color: #00FA05;
+}
+
+div.rot_info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+div.rot_info img {
+	position: absolute;
+	z-index: 0;
+	width: 100vw;
+	height: 30vw;
+}
+
+div.rot_info div {
+	position: absolute;
+	z-index: 0;
+	color: white;
+	top: 15vw;
+	left: 10vw;
+}
+
+div.rot_info h1 {
+	margin: 0;
+	display: inline-block;
+	font-size: 2.5vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0.5vw 2vw;
+	border-radius: 1vw 1vw 0vw 0vw;
+}
+
+div.rot_info div div {
+	position: static;
+	z-index: 1;
+	margin: 0;
+	width: 70vw;
+	font-size: 1.5vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0.5vw 2vw;
+	text-align: justify;
+	border-radius: 0vw 1vw 1vw 1vw;
+}
+
+.hide {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
