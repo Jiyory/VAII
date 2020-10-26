@@ -2,7 +2,6 @@
 	zelena 00FA05
 	oranzova FFA500
 */
-
 body {
 	background-image: url("../design/background.jpg");
 	background-size: 100vw 100vh;
@@ -17,7 +16,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 div.top_bar {
@@ -98,8 +97,87 @@ div.top_bar ul li:hover ul{
 	color: #FFA500;
 }
 
+/* PRE MOBIL */
+@media (max-width: 576px) {
+	div.top_bar {
+		position: relative;
+		width: 100vw;
+		height: auto;
+		background-color: #000;
+		border-bottom: 0.5vw solid #00FA05;
+	}
+
+	div.top_bar img {
+		width: 8vw;
+		height: 8vw;
+		float: none;
+		margin-top: 1vw;
+		margin-left: 6vw;
+	}
+
+	div.top_bar span {
+		position: absolute;
+		color: #FFF;
+		font-size: 5vw;
+		top: 2vw;
+		left: 16vw;
+		font-weight: bold;
+	}
+
+	div.top_bar ul {
+		float: none;
+		margin-right: 7vw;
+		margin-top: 0vw;
+	}
+
+	div.top_bar ul li {
+		display: block;
+		color: #00FA05;
+		font-size: 5vw;
+		font-weight: bold;
+		padding: 1.45vw 0.7vw 1.35vw 0.7vw;
+		transition: background-color 0.5s, color 0.5s;
+	}
+
+	div.top_bar ul li a {
+		color: #00FA05;
+	}
+
+	div.top_bar ul li a:hover {
+		text-shadow: 0.05vw 0.05vw 0.05vw #FFA500;
+	}
+
+	div.top_bar ul li:hover {
+		background-color: #222;
+	}
+
+	div.top_bar ul li ul{
+		display: none;
+		color: #FFA500;
+		padding: 0;
+		margin-top: 1.35vw;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-left: none;
+		border-right: none;
+		border-bottom: none;
+	}
+
+	div.top_bar ul li ul li{
+		display: block;
+		color: #00FA05;
+		font-size: 4vw;
+		padding: 0.5vw;
+		margin-left: 2vw;
+	}
 
 
+	div.top_bar ul li:hover ul{
+		position: static;
+		z-index: 3;
+		display: block;
+		color: #FFA500;
+	}
+}
 
 
 

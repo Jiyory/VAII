@@ -1,7 +1,18 @@
-<!--<?php
+<?php
 	if (!IsSet($_GET["page"]))
 		header("location: page/home");
-?>-->
+	
+	function loadCont() {
+		if ($_GET["page"] == "home")
+			include "pgs/home.php";
+		else if ($_GET["page"] == "technlogy")
+			include "pgs/techn.php";
+		else if ($_GET["page"] == "products")
+			include "pgs/prod.php";
+		else if ($_GET["page"] == "galery")
+			include "pgs/galr.php";
+	}
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 	<head>
@@ -12,6 +23,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/style_bottom.css">
 		<link rel="shortcut icon" href="../design/logo.png">
 		<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../scripts/rotate.js"></script>
+		<script src="../scripts/galery.js"></script>
 	</head>
 	<body>
 		<!-- ============== MENU, LOGO, ... =============== -->
@@ -19,23 +33,16 @@
 			<img src="../design/logo.png" alt="LOGO SPOLOCNOSTI">
 			<span>Názov firmy</span>
 			<ul>
-				<li><a href="#">DOMOV</a></li>
+				<li><a href="home">DOMOV</a></li>
 				<li>
-					<a href="#">TECHNOLOGIE</a>
-					<ul>
-						<li><a href="#">Tretia polozka</a></li>
-						<li><a href="#">Tretia polozka</a></li>
-						<li><a href="#">Tretia polozka</a></li>
-					</ul>
+					<a href="technlogy">TECHNOLOGIE</a>
 				</li>
-				<li><a href="#">PRODUKTY</a></li>
-				<li><a href="#">GALÉRIA</a></li>
+				<li><a href="products">PRODUKTY</a></li>
+				<li><a href="galery">GALÉRIA</a></li>
 				<li>
 					<a href="#">PRIHLÁSENIE</a>
 					<ul>
 						<li><a href="#">REGISTRÁCIA</a></li>
-						<li><a href="#">Tretia polozka</a></li>
-						<li><a href="#">Tretia polozka</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -51,39 +58,36 @@
 					</div>
 				</div>
 			</div>
-			<div class="rot_info hide">
+			<div class="rot_info">
 				<img src="../design/rotate2.jpg" alt="rotacia 2">
-				<h1>Nadpis 2</h1>
 				<div>
-					<h1>Nadpis 1</h1>
+					<h1>Nadpis 2</h1>
 					<div>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</div>
 				</div>
 			</div>
-			<div class="rot_info hide">
+			<div class="rot_info">
 				<img src="../design/rotate3.jpg" alt="rotacia 3">
-				<h1>Nadpis 3</h1>
 				<div>
-					<h1>Nadpis 1</h1>
+					<h1>Nadpis 3</h1>
 					<div>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</div>
 				</div>
 			</div>
-			<div class="rot_info hide">
+			<div class="rot_info">
 				<img src="../design/rotate4.jpg" alt="rotacia 4">
-				<h1>Nadpis 4</h1>
 				<div>
-					<h1>Nadpis 1</h1>
+					<h1>Nadpis 4</h1>
 					<div>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</div>
 				</div>
 			</div>
 			
-			<div class="rot_left">&lt;</div>
-			<div class="rot_right">&gt;</div>
+			<div class="rot_left" onclick="rotateLeft()">&lt;</div>
+			<div class="rot_right" onclick="rotateRight()">&gt;</div>
 			<div id="rot_buttons">
 				<a href="#">&otimes;</a>
 				<a href="#">&otimes;</a>
@@ -93,104 +97,7 @@
 		</div>
 		<!-- ============== OBSAH =============== -->
 		<div class="cont_panel">
-			<h1>Nadpis</h1>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		
-			<div class="cont_info">
-				<h1>Nadpis informacie</h1>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</div>
-				<span>
-					Pridal Ferko Mrkvicka, 18.10.2020 o 21:29.
-				</span>
-			</div>
-			
-			<div class="cont_info">
-				<h1>Nadpis informacie</h1>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</div>
-				<span>
-					Pridal Ferko Mrkvicka, 18.10.2020 o 21:29.
-				</span>
-			</div>
-			
-			<div class="cont_info">
-				<h1>Nadpis informacie</h1>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</div>
-				<span>
-					Pridal Ferko Mrkvicka, 18.10.2020 o 21:29.
-				</span>
-			</div>
-			
-			<div class="cont_info">
-				<h1>Nadpis informacie</h1>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</div>
-				<span>
-					Pridal Ferko Mrkvicka, 18.10.2020 o 21:29.
-				</span>
-			</div>
-			
-			<table>
-				<tr>
-					<th>Predmet</th>
-					<th>Cena</th>
-					<th>Čas</th>
-					<th>Popis</th>
-				</tr>
-				<tr>
-					<td>Nejaky</td>
-					<td>150E</td>
-					<td>12min</td>
-					<td>Tento predmet som si teraz vymyslel</td>
-				</tr>
-				<tr>
-					<td>Nejaky</td>
-					<td>10E</td>
-					<td>12min</td>
-					<td>Tento predmet som si teraz vymyslel</td>
-				</tr>
-				<tr>
-					<td>Nejaky</td>
-					<td>150E</td>
-					<td>120min</td>
-					<td>Tento predmet som si teraz vymyslel</td>
-				</tr>
-				<tr>
-					<td>Nejaky</td>
-					<td>50E</td>
-					<td>1min</td>
-					<td>Tento predmet som si teraz vymyslel</td>
-				</tr>
-				<tr>
-					<td>Nejaky</td>
-					<td>15000E</td>
-					<td>100min</td>
-					<td>Tento predmet som si teraz vymyslel</td>
-				</tr>
-				<tr>
-					<td>Nejaky</td>
-					<td>150E</td>
-					<td>12min</td>
-					<td>Tento predmet som si teraz vymyslel</td>
-				</tr>
-			</table>
+			<?php loadCont() ?>
 		</div>
 		<!-- ============== SPODNE MENU =============== -->
 		<div class="menu_bottom">
@@ -205,6 +112,9 @@
 			&copy; Jozef Marek 2020
 		</div>
 	</body>
+	<script>
+		startRotate();
+	</script>
 </html>
 
 
