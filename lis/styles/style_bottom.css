@@ -1,7 +1,7 @@
 
 div.menu_bottom {
 	text-align: center;
-	font-size: 4vw;
+	font-size: 2vw;
 	margin: auto;
 	margin-top: 1vw;
 	width: 91vw;
@@ -19,11 +19,43 @@ div.menu_bottom a:hover {
 
 div.bottom {
 	text-align: center;
-	font-size: 3vw;
+	font-size: 1.5vw;
 	margin: auto;
 	margin-top: 1vw;
 	margin-bottom: 1vw;
 	width: 91vw;
 	font-weight: bold;
 	color: #FFF;
+}
+
+/* PRE MOBIL */
+@media (max-width: 576px) {
+	div.menu_bottom {
+		text-align: center;
+		font-size: 12vw;
+		margin: auto;
+		margin-top: 1vw;
+		width: 91vw;
+		border-bottom: 0.2vw solid white;
+		font-weight: bold;
+	}
+
+	div.menu_bottom a {
+		color: #FFF;
+	}
+
+	div.menu_bottom a:hover {
+		color: #00FA05;
+	}
+
+	div.bottom {
+		text-align: center;
+		font-size: 3vw;
+		margin: auto;
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+		width: 91vw;
+		font-weight: bold;
+		color: #FFF;
+	}
 }
