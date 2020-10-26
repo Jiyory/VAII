@@ -32,7 +32,7 @@ div.bottom {
 @media (max-width: 576px) {
 	div.menu_bottom {
 		text-align: center;
-		font-size: 12vw;
+		font-size: 4vw;
 		margin: auto;
 		margin-top: 1vw;
 		width: 91vw;
