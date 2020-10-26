@@ -84,7 +84,7 @@ div#galery_full img {
 }
 
 /* PRE MOBIL */
-@media (max-width: 576px) {
+@media (max-width: 770px) {
 	div.cont_panel {
 		width: 92vw;
 		margin-left: 0vw;

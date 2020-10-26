@@ -29,7 +29,7 @@ div.bottom {
 }
 
 /* PRE MOBIL */
-@media (max-width: 576px) {
+@media (max-width: 770px) {
 	div.menu_bottom {
 		text-align: center;
 		font-size: 4vw;

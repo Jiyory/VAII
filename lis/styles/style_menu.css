@@ -98,7 +98,7 @@ div.top_bar ul li:hover ul{
 }
 
 /* PRE MOBIL */
-@media (max-width: 576px) {
+@media (max-width: 770px) {
 	div.top_bar {
 		position: relative;
 		width: 100vw;

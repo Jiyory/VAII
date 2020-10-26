@@ -117,7 +117,7 @@ div.rot_info div div {
 }
 
 /* PRE MOBIL */
-@media (max-width: 576px) {
+@media (max-width: 770px) {
 	div.rot_box {
 		position: relative;
 		width: 100vw;
